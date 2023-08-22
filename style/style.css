@@ -7,6 +7,8 @@
 a {
     color: white;
     text-decoration: none;
+
+    font-size: calc(7px + 1vw);
 }
 
 .container {
@@ -45,19 +47,30 @@ a {
 .nav-top, .nav-mid, .nav-bot {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 1vw;
     margin-left: 8%;
 }
 
 .nav-item {
     display: flex;
     align-items: center;
-    gap: 16px;
+    justify-content: flex-start;
+    gap: 1vw;
+    flex-wrap: wrap; 
 }
 
 .nav-item > a > img { /* To fully center the second added <a> around the icons... */
     display: flex;
     align-items: center;
+}
+
+a:first-child {
+    flex: 0 1 auto;
+}
+
+a:nth-child(2) {
+    flex: 1 1 auto;
+    width: 69px;
 }
 
 .main-event {
@@ -74,9 +87,8 @@ a {
 .nav-item.logo img {
     width: 50px;
     height: auto;
-    fill: white;
 }
 
 .nav-item.logo {
-    font-size: 1.5rem;
+    font-weight: bold;
 }
