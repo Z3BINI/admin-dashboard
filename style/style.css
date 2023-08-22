@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 a {
@@ -16,12 +17,13 @@ a {
     min-height: 100vh;
 
     display: grid;
-    grid-template: minmax(155px, 1fr) 5fr / minmax(60px, 1fr) minmax(240px, 4fr);
+    grid-template: minmax(155px, 1fr) 5fr / minmax(69px, 1fr) minmax(240px, 4fr);
     grid-template-areas: 
     "nav header"
     "nav main";
 }
 
+/* Header style start */
 .header {
     grid-area: header;
 
@@ -30,6 +32,49 @@ a {
     z-index: 1;
 }
 
+.row-1, div.search, div.user {
+    display: flex;
+    align-items: center;
+}
+
+.row-1 {
+    flex-wrap: wrap;
+    margin-top: 1%;
+}
+
+div.search {
+    flex: 2 1 auto;
+    justify-content: center;
+}
+
+img.search {
+    flex: 0 1 auto;
+}
+
+input[type="search"] {
+    flex: 1 1 auto;
+
+    border-radius: 10px;
+    background-color: rgb(206, 203, 203);
+    border: none;
+    height: 20px;
+    padding-left: 5px;
+}
+
+div.user {
+    flex: 1 1 auto;    
+    justify-content: center;
+    gap: 2%;
+}
+
+div.user > img {
+    flex: 0 1 auto;
+}
+
+div.user > p {
+    flex: 0 1 auto;
+}
+/* Header style end */
 .side-nav {
     grid-area: nav;
 
@@ -38,6 +83,15 @@ a {
     display: flex;
     flex-direction: column;
     gap: 50px;
+}
+
+.nav-item.logo img {
+    width: 50px;
+    height: auto;
+}
+
+.nav-item.logo {
+    font-weight: bold;
 }
 
 .nav-top {
@@ -79,16 +133,14 @@ a:nth-child(2) {
     background-color: rgb(206, 203, 203);
 }
 
-.nav-item img {
+img[alt="icon"] {
     width: 25px;
     height: auto;
 }
 
-.nav-item.logo img {
+img[alt="profile"] {
+    height: 50px;
     width: 50px;
-    height: auto;
-}
-
-.nav-item.logo {
-    font-weight: bold;
+    border-radius: 50%;
+    border: 2px solid #333334;
 }
