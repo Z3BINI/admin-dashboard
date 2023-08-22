@@ -2,6 +2,31 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
 
-    background-color: aquamarine;
+.container {
+    max-width: 100vw;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template: minmax(155px, 1fr) 5fr / minmax(60px, 1fr) minmax(240px, 4fr);
+    grid-template-areas: 
+    "nav header"
+    "nav main";
+}
+
+.header {
+    grid-area: header;
+
+    background-color: bisque;
+}
+
+.side-nav {
+    grid-area: nav;
+
+    background-color: blue;
+}
+
+.main-event {
+    grid-area: main;
 }
