@@ -176,23 +176,26 @@ a:nth-child(2) {
 }
 
 .flex-container {
-    display: flex;
-    flex-wrap: wrap-reverse;
     padding: 1vw;
+    display: flex;
+    min-width: 240px;
+
+    flex-wrap: wrap-reverse;
 }
 
 .projects {
-    flex: 5 1 auto;
-    min-width: 240px;
+    flex: 3 1 80%;
 }
 
 .side-info {
-    flex: 1 1 auto;
     display: flex;
     flex-direction: column;
     gap: 2vw;
-    width: clamp(165px, 5vw, 240px);
     color: white;
+
+    flex: 1 3 20%;
+
+    min-width: 145px;
 }
 
 .an-square {
@@ -214,6 +217,13 @@ h3 {
     margin-bottom: 10px;
     color:#4b4b4c;
 }
+
+.proj-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 5px;
+}
+/*Main event end*/
 
 img[alt="icon"] {
     width: 25px;
