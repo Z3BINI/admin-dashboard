@@ -45,6 +45,7 @@ a {
 div.search {
     flex: 2 1 auto;
     justify-content: center;
+    margin-right: 2%;
 }
 
 img.search {
@@ -64,7 +65,7 @@ input[type="search"] {
 div.user {
     flex: 1 1 auto;    
     justify-content: center;
-    gap: 2%;
+    gap: 5%;
 }
 
 div.user > img {
@@ -75,6 +76,7 @@ div.user > p {
     flex: 0 1 auto;
 }
 /* Header style end */
+
 .side-nav {
     grid-area: nav;
 
